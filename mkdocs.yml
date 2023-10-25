@@ -1,11 +1,11 @@
-site_name: Otterdog configuration @ {{ org }}
-site_description: Otterdog configuration @ {{ org }}
+site_name: Otterdog configuration @ eclipse-ee4j
+site_description: Otterdog configuration @ eclipse-ee4j
 strict: false
 
-site_url: https://{{ org }}.github.io/.eclipsefdn/
+site_url: https://eclipse-ee4j.github.io/.eclipsefdn/
 
-repo_name: {{ org }}/.eclipsefdn
-repo_url: https://github.com/{{ org }}/.eclipsefdn/
+repo_name: eclipse-ee4j/.eclipsefdn
+repo_url: https://github.com/eclipse-ee4j/.eclipsefdn/
 
 docs_dir: ./docs
 site_dir: ./_site
