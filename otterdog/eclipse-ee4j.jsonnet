@@ -2417,7 +2417,6 @@ orgs.newOrg('eclipse-ee4j') {
     },
     orgs.newRepo('soteria') {
       allow_merge_commit: true,
-      allow_update_branch: false,
       default_branch: "master",
       delete_branch_on_merge: false,
       dependabot_security_updates_enabled: true,
