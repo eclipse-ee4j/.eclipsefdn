@@ -8,7 +8,6 @@ orgs.newOrg('eclipse-ee4j') {
     dependency_graph_enabled_for_new_repositories: false,
     description: "The Eclipse EE4J Project",
     email: "ee4j-community@eclipse.org",
-    members_can_change_project_visibility: false,
     members_can_delete_issues: true,
     name: "Eclipse EE4J",
     packages_containers_internal: false,
