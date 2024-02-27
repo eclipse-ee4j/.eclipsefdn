@@ -494,6 +494,7 @@ orgs.newOrg('eclipse-ee4j') {
       gh_pages_build_type: "legacy",
       gh_pages_source_branch: "gh-pages",
       gh_pages_source_path: "/",
+      has_discussions: true,
       homepage: "https://eclipse-ee4j.github.io/glassfish/",
       secret_scanning: "disabled",
       secret_scanning_push_protection: "disabled",
@@ -2395,7 +2396,7 @@ orgs.newOrg('eclipse-ee4j') {
     },
     orgs.newRepo('parsson') {
       allow_merge_commit: true,
-      allow_update_branch: false,
+      allow_update_branch: true,
       default_branch: "master",
       delete_branch_on_merge: false,
       dependabot_alerts_enabled: false,
