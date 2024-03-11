@@ -165,7 +165,6 @@ orgs.newOrg('eclipse-ee4j') {
     orgs.newRepo('cdi-cpl') {
       archived: true,
       default_branch: "1.1.x",
-      dependabot_alerts_enabled: false,
       description: "cdi-cpl",
       secret_scanning: "disabled",
       secret_scanning_push_protection: "disabled",
@@ -177,7 +176,6 @@ orgs.newOrg('eclipse-ee4j') {
     orgs.newRepo('cdi-tck-cpl') {
       archived: true,
       default_branch: "1.0",
-      dependabot_alerts_enabled: false,
       description: "cdi-tck-cpl",
       secret_scanning: "disabled",
       secret_scanning_push_protection: "disabled",
@@ -1770,7 +1768,6 @@ orgs.newOrg('eclipse-ee4j') {
     orgs.newRepo('jersey-web') {
       archived: true,
       default_branch: "master",
-      dependabot_alerts_enabled: false,
       dependabot_security_updates_enabled: true,
       description: "The source repository for",
       homepage: "https://jersey.github.io",
@@ -2396,7 +2393,6 @@ orgs.newOrg('eclipse-ee4j') {
     },
     orgs.newRepo('parsson') {
       allow_merge_commit: true,
-      allow_update_branch: true,
       default_branch: "master",
       delete_branch_on_merge: false,
       dependabot_alerts_enabled: false,
