@@ -7,7 +7,6 @@ orgs.newOrg('eclipse-ee4j') {
     email: "ee4j-community@eclipse.org",
     members_can_delete_issues: true,
     name: "Eclipse EE4J",
-    two_factor_requirement: false,
     web_commit_signoff_required: false,
     workflows+: {
       default_workflow_permissions: "write",
