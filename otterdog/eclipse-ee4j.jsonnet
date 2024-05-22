@@ -363,7 +363,6 @@ orgs.newOrg('eclipse-ee4j') {
       allow_merge_commit: true,
       allow_update_branch: false,
       delete_branch_on_merge: false,
-      dependabot_alerts_enabled: false,
       description: "Exousia, a Jakarta Authorization implementation",
       homepage: "",
       web_commit_signoff_required: false,
