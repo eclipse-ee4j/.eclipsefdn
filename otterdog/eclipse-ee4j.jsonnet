@@ -18,8 +18,6 @@ orgs.newOrg('eclipse-ee4j') {
       allow_update_branch: false,
       delete_branch_on_merge: false,
       dependabot_alerts_enabled: false,
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -34,8 +32,6 @@ orgs.newOrg('eclipse-ee4j') {
       description: "Angus Activation",
       gh_pages_build_type: "workflow",
       homepage: "https://eclipse-ee4j.github.io/angus-activation/",
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -58,8 +54,6 @@ orgs.newOrg('eclipse-ee4j') {
       gh_pages_build_type: "workflow",
       has_discussions: true,
       homepage: "https://eclipse-ee4j.github.io/angus-mail",
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -80,8 +74,6 @@ orgs.newOrg('eclipse-ee4j') {
       delete_branch_on_merge: false,
       dependabot_security_updates_enabled: true,
       description: "Glassfish Bean Validation 2.0 porting kit",
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -98,8 +90,6 @@ orgs.newOrg('eclipse-ee4j') {
       gh_pages_source_branch: "gh-pages",
       gh_pages_source_path: "/",
       homepage: "https://eclipse-ee4j.github.io/cargotracker/",
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       topics+: [
         "ddd",
         "domain-driven-design",
@@ -130,8 +120,6 @@ orgs.newOrg('eclipse-ee4j') {
       archived: true,
       default_branch: "1.1.x",
       description: "cdi-cpl",
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -141,8 +129,6 @@ orgs.newOrg('eclipse-ee4j') {
       archived: true,
       default_branch: "1.0",
       description: "cdi-tck-cpl",
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -153,8 +139,6 @@ orgs.newOrg('eclipse-ee4j') {
       allow_update_branch: false,
       default_branch: "master",
       delete_branch_on_merge: false,
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -166,8 +150,6 @@ orgs.newOrg('eclipse-ee4j') {
       default_branch: "master",
       delete_branch_on_merge: false,
       dependabot_security_updates_enabled: true,
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -178,8 +160,6 @@ orgs.newOrg('eclipse-ee4j') {
       allow_update_branch: false,
       default_branch: "master",
       delete_branch_on_merge: false,
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -194,8 +174,6 @@ orgs.newOrg('eclipse-ee4j') {
       description: "Eclipselink project",
       has_discussions: true,
       homepage: "https://eclipse.dev/eclipselink/",
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -224,8 +202,6 @@ orgs.newOrg('eclipse-ee4j') {
       default_branch: "master",
       delete_branch_on_merge: false,
       dependabot_alerts_enabled: false,
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -237,8 +213,6 @@ orgs.newOrg('eclipse-ee4j') {
       delete_branch_on_merge: false,
       dependabot_alerts_enabled: false,
       description: "eclipselink-build-support",
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -250,8 +224,6 @@ orgs.newOrg('eclipse-ee4j') {
       default_branch: "master",
       delete_branch_on_merge: false,
       description: "eclipselink-examples",
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -264,8 +236,6 @@ orgs.newOrg('eclipse-ee4j') {
       delete_branch_on_merge: false,
       dependabot_security_updates_enabled: true,
       description: "eclipselink-oracleddlparser",
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -277,8 +247,6 @@ orgs.newOrg('eclipse-ee4j') {
       default_branch: "master",
       delete_branch_on_merge: false,
       dependabot_alerts_enabled: false,
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       workflows+: {
         enabled: false,
@@ -290,8 +258,6 @@ orgs.newOrg('eclipse-ee4j') {
       default_branch: "master",
       delete_branch_on_merge: false,
       dependabot_alerts_enabled: false,
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       workflows+: {
         enabled: false,
@@ -303,8 +269,6 @@ orgs.newOrg('eclipse-ee4j') {
       default_branch: "master",
       delete_branch_on_merge: false,
       description: "eclipselink-workbench",
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -319,8 +283,6 @@ orgs.newOrg('eclipse-ee4j') {
       description: "Eclipse EE4J Top-level Project and community related issues",
       has_wiki: false,
       homepage: "http://www.eclipse.org/ee4j",
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -335,8 +297,6 @@ orgs.newOrg('eclipse-ee4j') {
       description: "Website for the Eclipse EE4J Top Level Project",
       has_projects: false,
       has_wiki: false,
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -349,8 +309,6 @@ orgs.newOrg('eclipse-ee4j') {
       delete_branch_on_merge: false,
       dependabot_security_updates_enabled: true,
       description: "enterprise-deployment",
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -375,8 +333,6 @@ orgs.newOrg('eclipse-ee4j') {
       dependabot_alerts_enabled: false,
       description: "Epicyro, a Jakarta Authentication implementation",
       homepage: "https://projects.eclipse.org/projects/ee4j.epicyro",
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -398,8 +354,6 @@ orgs.newOrg('eclipse-ee4j') {
       delete_branch_on_merge: false,
       dependabot_alerts_enabled: false,
       description: "epicyro-website",
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -412,8 +366,6 @@ orgs.newOrg('eclipse-ee4j') {
       dependabot_alerts_enabled: false,
       description: "Exousia, a Jakarta Authorization implementation",
       homepage: "",
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -427,8 +379,6 @@ orgs.newOrg('eclipse-ee4j') {
       dependabot_alerts_enabled: false,
       description: "Expressly, a Jakarta Expression Language implementation",
       homepage: "",
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -439,8 +389,6 @@ orgs.newOrg('eclipse-ee4j') {
       allow_update_branch: false,
       default_branch: "master",
       delete_branch_on_merge: false,
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -458,8 +406,6 @@ orgs.newOrg('eclipse-ee4j') {
       gh_pages_source_path: "/",
       has_discussions: true,
       homepage: "https://eclipse-ee4j.github.io/glassfish/",
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -498,8 +444,6 @@ orgs.newOrg('eclipse-ee4j') {
       dependabot_security_updates_enabled: true,
       description: "GlassFish Build Maven Plugin",
       homepage: "",
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -526,8 +470,6 @@ orgs.newOrg('eclipse-ee4j') {
       default_branch: "master",
       delete_branch_on_merge: false,
       dependabot_security_updates_enabled: true,
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -559,8 +501,6 @@ orgs.newOrg('eclipse-ee4j') {
       gh_pages_source_branch: "gh-pages",
       gh_pages_source_path: "/",
       homepage: "https://projects.eclipse.org/projects/ee4j.glassfish",
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -587,8 +527,6 @@ orgs.newOrg('eclipse-ee4j') {
       default_branch: "master",
       delete_branch_on_merge: false,
       dependabot_security_updates_enabled: true,
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -615,8 +553,6 @@ orgs.newOrg('eclipse-ee4j') {
       default_branch: "master",
       delete_branch_on_merge: false,
       dependabot_security_updates_enabled: true,
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -628,8 +564,6 @@ orgs.newOrg('eclipse-ee4j') {
       default_branch: "master",
       delete_branch_on_merge: false,
       dependabot_security_updates_enabled: true,
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -643,8 +577,6 @@ orgs.newOrg('eclipse-ee4j') {
       dependabot_security_updates_enabled: true,
       description: "FighterFish project",
       homepage: "",
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -688,8 +620,6 @@ orgs.newOrg('eclipse-ee4j') {
       delete_branch_on_merge: false,
       dependabot_security_updates_enabled: true,
       description: "glassfish-ha-api",
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -721,8 +651,6 @@ orgs.newOrg('eclipse-ee4j') {
       gh_pages_source_branch: "gh-pages",
       gh_pages_source_path: "/docs",
       homepage: "https://eclipse-ee4j.github.io/glassfish-hk2",
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -771,8 +699,6 @@ orgs.newOrg('eclipse-ee4j') {
       dependabot_security_updates_enabled: true,
       description: "HK2 extra",
       homepage: "",
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -817,8 +743,6 @@ orgs.newOrg('eclipse-ee4j') {
       dependabot_security_updates_enabled: true,
       description: "JSFTemplating project",
       homepage: "",
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       topics+: [
         "glassfish",
         "jsf",
@@ -867,8 +791,6 @@ orgs.newOrg('eclipse-ee4j') {
       default_branch: "master",
       delete_branch_on_merge: false,
       homepage: "",
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -896,8 +818,6 @@ orgs.newOrg('eclipse-ee4j') {
       delete_branch_on_merge: false,
       dependabot_security_updates_enabled: true,
       description: "Glassfish maven embedded plugin",
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -923,8 +843,6 @@ orgs.newOrg('eclipse-ee4j') {
       dependabot_security_updates_enabled: true,
       description: "GlassFish repackaged 3rd party",
       homepage: "",
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -952,8 +870,6 @@ orgs.newOrg('eclipse-ee4j') {
       default_branch: "master",
       delete_branch_on_merge: false,
       dependabot_security_updates_enabled: true,
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -965,8 +881,6 @@ orgs.newOrg('eclipse-ee4j') {
       default_branch: "master",
       delete_branch_on_merge: false,
       dependabot_security_updates_enabled: true,
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -992,8 +906,6 @@ orgs.newOrg('eclipse-ee4j') {
       dependabot_security_updates_enabled: true,
       description: "Shoal",
       homepage: "",
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -1038,8 +950,6 @@ orgs.newOrg('eclipse-ee4j') {
       dependabot_security_updates_enabled: true,
       description: "API Specification Version Maven Plugin",
       homepage: "",
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -1068,8 +978,6 @@ orgs.newOrg('eclipse-ee4j') {
       dependabot_security_updates_enabled: true,
       description: "GlassFish Woodstock UI components",
       homepage: "",
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -1096,8 +1004,6 @@ orgs.newOrg('eclipse-ee4j') {
       delete_branch_on_merge: false,
       dependabot_alerts_enabled: false,
       description: "Eclipse Gransasso Repository",
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -1114,8 +1020,6 @@ orgs.newOrg('eclipse-ee4j') {
       gh_pages_source_branch: "gh-pages",
       gh_pages_source_path: "/docs",
       homepage: "https://eclipse-ee4j.github.io/grizzly",
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -1172,8 +1076,6 @@ orgs.newOrg('eclipse-ee4j') {
       default_branch: "master",
       delete_branch_on_merge: false,
       dependabot_security_updates_enabled: true,
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -1204,8 +1106,6 @@ orgs.newOrg('eclipse-ee4j') {
       delete_branch_on_merge: false,
       dependabot_security_updates_enabled: true,
       description: "Grizzly-memcached",
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -1248,8 +1148,6 @@ orgs.newOrg('eclipse-ee4j') {
       delete_branch_on_merge: false,
       dependabot_security_updates_enabled: true,
       description: "Grizzly-npn",
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -1274,8 +1172,6 @@ orgs.newOrg('eclipse-ee4j') {
       delete_branch_on_merge: false,
       dependabot_security_updates_enabled: true,
       description: "Grizzly-thrift",
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -1317,8 +1213,6 @@ orgs.newOrg('eclipse-ee4j') {
       delete_branch_on_merge: false,
       dependabot_security_updates_enabled: true,
       description: "Jakarta EE Examples",
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -1335,8 +1229,6 @@ orgs.newOrg('eclipse-ee4j') {
       gh_pages_source_branch: "gh-pages",
       gh_pages_source_path: "/",
       homepage: "https://eclipse-ee4j.github.io/jakartaee-firstcup",
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -1365,8 +1257,6 @@ orgs.newOrg('eclipse-ee4j') {
       default_branch: "master",
       delete_branch_on_merge: false,
       dependabot_security_updates_enabled: true,
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -1390,8 +1280,6 @@ orgs.newOrg('eclipse-ee4j') {
       default_branch: "master",
       delete_branch_on_merge: false,
       description: "This repository will be used to help manage the various Jakarta EE releases.  No deliverable code will be housed in this repository -- only Issues, PRs, Tools, etc in support of delivering a release",
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -1402,8 +1290,6 @@ orgs.newOrg('eclipse-ee4j') {
       allow_update_branch: false,
       default_branch: "master",
       delete_branch_on_merge: false,
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -1415,8 +1301,6 @@ orgs.newOrg('eclipse-ee4j') {
       default_branch: "master",
       delete_branch_on_merge: false,
       dependabot_security_updates_enabled: true,
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -1433,8 +1317,6 @@ orgs.newOrg('eclipse-ee4j') {
       gh_pages_source_branch: "gh-pages",
       gh_pages_source_path: "/",
       homepage: "https://eclipse-ee4j.github.io/jakartaee-tutorial",
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -1464,8 +1346,6 @@ orgs.newOrg('eclipse-ee4j') {
       delete_branch_on_merge: false,
       dependabot_security_updates_enabled: true,
       description: "Jakartaee-stable project",
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -1494,8 +1374,6 @@ orgs.newOrg('eclipse-ee4j') {
       gh_pages_source_branch: "gh-pages",
       gh_pages_source_path: "/",
       homepage: "",
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -1509,8 +1387,6 @@ orgs.newOrg('eclipse-ee4j') {
       default_branch: "master",
       delete_branch_on_merge: false,
       dependabot_security_updates_enabled: true,
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -1530,8 +1406,6 @@ orgs.newOrg('eclipse-ee4j') {
       default_branch: "master",
       delete_branch_on_merge: false,
       dependabot_security_updates_enabled: true,
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -1550,8 +1424,6 @@ orgs.newOrg('eclipse-ee4j') {
       default_branch: "master",
       delete_branch_on_merge: false,
       dependabot_security_updates_enabled: true,
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -1577,8 +1449,6 @@ orgs.newOrg('eclipse-ee4j') {
       gh_pages_source_path: "/",
       has_discussions: true,
       homepage: "https://eclipse-ee4j.github.io/jaxb-ri/",
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       topics+: [
         "java",
         "xml"
@@ -1597,8 +1467,6 @@ orgs.newOrg('eclipse-ee4j') {
       default_branch: "master",
       delete_branch_on_merge: false,
       dependabot_security_updates_enabled: true,
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -1619,8 +1487,6 @@ orgs.newOrg('eclipse-ee4j') {
       delete_branch_on_merge: false,
       dependabot_security_updates_enabled: true,
       description: "Jakartaee-stable project",
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -1646,8 +1512,6 @@ orgs.newOrg('eclipse-ee4j') {
       dependabot_security_updates_enabled: true,
       description: "JAXR Implementation (Eclipse Metro Project)",
       homepage: "",
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -1665,8 +1529,6 @@ orgs.newOrg('eclipse-ee4j') {
       gh_pages_source_path: "/",
       has_discussions: true,
       homepage: "https://github.com/eclipse-ee4j/jersey/wiki",
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -1735,8 +1597,6 @@ orgs.newOrg('eclipse-ee4j') {
       dependabot_security_updates_enabled: true,
       description: "The source repository for",
       homepage: "https://jersey.github.io",
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -1752,8 +1612,6 @@ orgs.newOrg('eclipse-ee4j') {
       gh_pages_build_type: "legacy",
       gh_pages_source_branch: "master",
       gh_pages_source_path: "/",
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -1772,8 +1630,6 @@ orgs.newOrg('eclipse-ee4j') {
       gh_pages_source_branch: "gh-pages",
       gh_pages_source_path: "/",
       has_discussions: true,
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -1811,8 +1667,6 @@ orgs.newOrg('eclipse-ee4j') {
       allow_update_branch: false,
       delete_branch_on_merge: false,
       dependabot_alerts_enabled: false,
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -1826,8 +1680,6 @@ orgs.newOrg('eclipse-ee4j') {
       dependabot_security_updates_enabled: true,
       description: "Jakarta Management",
       homepage: "https://projects.eclipse.org/projects/ee4j.jakartaee-stable",
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -1852,8 +1704,6 @@ orgs.newOrg('eclipse-ee4j') {
       gh_pages_source_path: "/",
       has_discussions: true,
       homepage: "https://eclipse-ee4j.github.io/metro-jax-ws/",
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -1868,8 +1718,6 @@ orgs.newOrg('eclipse-ee4j') {
       default_branch: "master",
       delete_branch_on_merge: false,
       description: "JWSdp samples",
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -1882,8 +1730,6 @@ orgs.newOrg('eclipse-ee4j') {
       delete_branch_on_merge: false,
       dependabot_security_updates_enabled: true,
       description: "Metro mimepull",
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -1895,8 +1741,6 @@ orgs.newOrg('eclipse-ee4j') {
       default_branch: "master",
       delete_branch_on_merge: false,
       description: "Metro package rename",
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -1909,8 +1753,6 @@ orgs.newOrg('eclipse-ee4j') {
       delete_branch_on_merge: false,
       dependabot_security_updates_enabled: true,
       description: "Metro policy",
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -1924,8 +1766,6 @@ orgs.newOrg('eclipse-ee4j') {
       dependabot_security_updates_enabled: true,
       gh_pages_build_type: "workflow",
       homepage: "https://eclipse-ee4j.github.io/metro-saaj/",
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       topics+: [
         "java",
         "soap",
@@ -1959,8 +1799,6 @@ orgs.newOrg('eclipse-ee4j') {
       delete_branch_on_merge: false,
       dependabot_security_updates_enabled: true,
       description: "Metro test harness",
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -1978,8 +1816,6 @@ orgs.newOrg('eclipse-ee4j') {
       gh_pages_source_path: "/",
       has_discussions: true,
       homepage: "https://eclipse-ee4j.github.io/metro-wsit/",
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -1995,8 +1831,6 @@ orgs.newOrg('eclipse-ee4j') {
       delete_branch_on_merge: false,
       dependabot_security_updates_enabled: true,
       description: "Metro xmlstreambuffer",
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -2012,8 +1846,6 @@ orgs.newOrg('eclipse-ee4j') {
       gh_pages_source_branch: "gh-pages",
       gh_pages_source_path: "/",
       homepage: "",
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -2089,8 +1921,6 @@ orgs.newOrg('eclipse-ee4j') {
       allow_update_branch: false,
       default_branch: "master",
       delete_branch_on_merge: false,
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -2114,8 +1944,6 @@ orgs.newOrg('eclipse-ee4j') {
       delete_branch_on_merge: false,
       dependabot_alerts_enabled: false,
       description: "Open DI",
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -2135,8 +1963,6 @@ orgs.newOrg('eclipse-ee4j') {
       gh_pages_source_path: "/",
       has_wiki: false,
       homepage: "https://projects.eclipse.org/projects/ee4j.openmq/",
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -2219,8 +2045,6 @@ orgs.newOrg('eclipse-ee4j') {
       dependabot_security_updates_enabled: true,
       description: "Eclipse ORB is a CORBA orb for use in Jakarta EE and GlassFish and other projects that still need an ORB.",
       homepage: "https://projects.eclipse.org/projects/ee4j.orb",
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       topics+: [
         "corba",
         "corba-client",
@@ -2259,8 +2083,6 @@ orgs.newOrg('eclipse-ee4j') {
       default_branch: "master",
       delete_branch_on_merge: false,
       dependabot_security_updates_enabled: true,
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -2293,8 +2115,6 @@ orgs.newOrg('eclipse-ee4j') {
       default_branch: "master",
       delete_branch_on_merge: false,
       dependabot_security_updates_enabled: true,
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -2327,8 +2147,6 @@ orgs.newOrg('eclipse-ee4j') {
       default_branch: "master",
       delete_branch_on_merge: false,
       dependabot_security_updates_enabled: true,
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -2365,8 +2183,6 @@ orgs.newOrg('eclipse-ee4j') {
       gh_pages_source_branch: "gh-pages",
       gh_pages_source_path: "/",
       has_discussions: true,
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -2382,8 +2198,6 @@ orgs.newOrg('eclipse-ee4j') {
       dependabot_security_updates_enabled: true,
       description: "Soteria, a Jakarta Security implementation",
       homepage: "",
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -2445,8 +2259,6 @@ orgs.newOrg('eclipse-ee4j') {
       gh_pages_source_branch: "gh-pages",
       gh_pages_source_path: "/",
       homepage: "",
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -2465,8 +2277,6 @@ orgs.newOrg('eclipse-ee4j') {
       gh_pages_build_type: "legacy",
       gh_pages_source_branch: "gh-pages",
       gh_pages_source_path: "/",
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -2536,8 +2346,6 @@ orgs.newOrg('eclipse-ee4j') {
       gh_pages_build_type: "legacy",
       gh_pages_source_branch: "master",
       gh_pages_source_path: "/",
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -2554,8 +2362,6 @@ orgs.newOrg('eclipse-ee4j') {
       dependabot_security_updates_enabled: true,
       description: "WaSP, a Jakarta Pages implementation",
       homepage: "",
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -2572,8 +2378,6 @@ orgs.newOrg('eclipse-ee4j') {
       gh_pages_source_branch: "gh-pages",
       gh_pages_source_path: "/",
       homepage: "https://projects.eclipse.org/projects/ee4j.yasson",
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
