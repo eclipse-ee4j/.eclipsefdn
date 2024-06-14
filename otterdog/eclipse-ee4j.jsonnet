@@ -120,6 +120,8 @@ orgs.newOrg('eclipse-ee4j') {
       archived: true,
       default_branch: "1.1.x",
       description: "cdi-cpl",
+      secret_scanning: "disabled",
+      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -129,6 +131,8 @@ orgs.newOrg('eclipse-ee4j') {
       archived: true,
       default_branch: "1.0",
       description: "cdi-tck-cpl",
+      secret_scanning: "disabled",
+      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -1307,6 +1311,7 @@ orgs.newOrg('eclipse-ee4j') {
       },
     },
     orgs.newRepo('jakartaee-tutorial') {
+      archived: true,
       allow_merge_commit: true,
       allow_update_branch: false,
       default_branch: "master",
@@ -1597,6 +1602,8 @@ orgs.newOrg('eclipse-ee4j') {
       dependabot_security_updates_enabled: true,
       description: "The source repository for",
       homepage: "https://jersey.github.io",
+      secret_scanning: "disabled",
+      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
