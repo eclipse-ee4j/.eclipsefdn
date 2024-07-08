@@ -1991,19 +1991,6 @@ orgs.newOrg('eclipse-ee4j') {
           ],
           secret: "********",
         },
-        orgs.newRepoWebhook('https://notify.travis-ci.org') {
-          active: false,
-          events+: [
-            "create",
-            "delete",
-            "issue_comment",
-            "member",
-            "public",
-            "pull_request",
-            "push",
-            "repository"
-          ],
-        },
         orgs.newRepoWebhook('https://ci.eclipse.org/openmq/ghprbhook/') {
           content_type: "json",
           events+: [
