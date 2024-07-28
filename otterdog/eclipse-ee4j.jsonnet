@@ -1975,22 +1975,6 @@ orgs.newOrg('eclipse-ee4j') {
         default_workflow_permissions: "write",
       },
       webhooks: [
-        orgs.newRepoWebhook('https://webhook.zenhub.io/webhook/github/v1/55c23ea767d046c00d') {
-          content_type: "json",
-          events+: [
-            "issue_comment",
-            "issues",
-            "label",
-            "member",
-            "milestone",
-            "pull_request",
-            "pull_request_review",
-            "pull_request_review_comment",
-            "repository",
-            "team_add"
-          ],
-          secret: "********",
-        },
         orgs.newRepoWebhook('https://ci.eclipse.org/openmq/github-webhook/') {
           content_type: "json",
           events+: [
