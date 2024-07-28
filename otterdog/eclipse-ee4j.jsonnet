@@ -1991,14 +1991,6 @@ orgs.newOrg('eclipse-ee4j') {
           ],
           secret: "********",
         },
-        orgs.newRepoWebhook('https://ci.eclipse.org/openmq/ghprbhook/') {
-          content_type: "json",
-          events+: [
-            "issue_comment",
-            "pull_request",
-            "push"
-          ],
-        },
         orgs.newRepoWebhook('https://ci.eclipse.org/openmq/github-webhook/') {
           content_type: "json",
           events+: [
