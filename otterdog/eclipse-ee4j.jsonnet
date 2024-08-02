@@ -1627,15 +1627,12 @@ orgs.newOrg('eclipse-ee4j') {
       delete_branch_on_merge: false,
       dependabot_security_updates_enabled: true,
       description: "Jersey project",
-      gh_pages_build_type: "legacy",
-      gh_pages_source_branch: "master",
-      gh_pages_source_path: "/",
+      gh_pages_build_type: "workflow",
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
       },
       environments: [
-        orgs.newEnvironment('github-pages'),
         orgs.newEnvironment('master'),
       ],
     },
