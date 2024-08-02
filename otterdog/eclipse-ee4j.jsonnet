@@ -1622,7 +1622,7 @@ orgs.newOrg('eclipse-ee4j') {
         default_workflow_permissions: "write",
       },
       environments: [
-        orgs.newEnvironment('github-pages'),
+        orgs.newEnvironment('master'),
       ],
     },
     orgs.newRepo('krazo') {
