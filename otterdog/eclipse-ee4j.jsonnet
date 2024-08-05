@@ -1008,8 +1008,6 @@ orgs.newOrg('eclipse-ee4j') {
       delete_branch_on_merge: false,
       dependabot_alerts_enabled: false,
       description: "Official supported GlassFish docker",
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
