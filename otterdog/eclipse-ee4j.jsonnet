@@ -1861,6 +1861,7 @@ orgs.newOrg('eclipse-ee4j') {
       gh_pages_source_branch: "gh-pages",
       gh_pages_source_path: "/",
       homepage: "",
+      private_vulnerability_reporting_enabled: true,
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
