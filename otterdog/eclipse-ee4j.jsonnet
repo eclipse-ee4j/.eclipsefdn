@@ -2196,7 +2196,7 @@ orgs.newOrg('eclipse-ee4j') {
     },
     orgs.newRepo('soteria') {
       allow_merge_commit: true,
-      default_branch: "master",
+      default_branch: "main",
       delete_branch_on_merge: false,
       dependabot_security_updates_enabled: true,
       description: "Soteria, a Jakarta Security implementation",
