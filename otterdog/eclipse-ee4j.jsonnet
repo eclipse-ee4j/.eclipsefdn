@@ -86,10 +86,10 @@ orgs.newOrg('eclipse-ee4j') {
       delete_branch_on_merge: false,
       dependabot_security_updates_enabled: true,
       description: "The project demonstrates how you can develop applications with Jakarta EE using widely adopted architectural best practices like Domain-Driven Design (DDD).",
-      has_wiki: false,
       gh_pages_build_type: "legacy",
       gh_pages_source_branch: "gh-pages",
       gh_pages_source_path: "/",
+      has_wiki: false,
       homepage: "https://eclipse-ee4j.github.io/cargotracker/",
       topics+: [
         "ddd",
@@ -112,14 +112,20 @@ orgs.newOrg('eclipse-ee4j') {
         orgs.newRepoSecret('POSTGRES_USER') {
           value: "********",
         },
+        orgs.newRepoSecret('WORKFLOW_ACCESS_TOKEN') {
+          value: "********",
+        },
       ],
       environments: [
         orgs.newEnvironment('github-pages'),
       ],
     },
     orgs.newRepo('cdi-cpl') {
+      allow_merge_commit: true,
+      allow_update_branch: false,
       archived: true,
       default_branch: "1.1.x",
+      delete_branch_on_merge: false,
       description: "cdi-cpl",
       secret_scanning: "disabled",
       secret_scanning_push_protection: "disabled",
@@ -129,8 +135,11 @@ orgs.newOrg('eclipse-ee4j') {
       },
     },
     orgs.newRepo('cdi-tck-cpl') {
+      allow_merge_commit: true,
+      allow_update_branch: false,
       archived: true,
       default_branch: "1.0",
+      delete_branch_on_merge: false,
       description: "cdi-tck-cpl",
       secret_scanning: "disabled",
       secret_scanning_push_protection: "disabled",
@@ -1323,8 +1332,11 @@ orgs.newOrg('eclipse-ee4j') {
       },
     },
     orgs.newRepo('jakartaee-tutorial') {
+      allow_merge_commit: true,
+      allow_update_branch: false,
       archived: true,
       default_branch: "master",
+      delete_branch_on_merge: false,
       dependabot_security_updates_enabled: true,
       description: "Jakarta EE Tutorial",
       gh_pages_build_type: "legacy",
@@ -1607,8 +1619,11 @@ orgs.newOrg('eclipse-ee4j') {
       ],
     },
     orgs.newRepo('jersey-web') {
+      allow_merge_commit: true,
+      allow_update_branch: false,
       archived: true,
       default_branch: "master",
+      delete_branch_on_merge: false,
       dependabot_security_updates_enabled: true,
       description: "The source repository for",
       homepage: "https://jersey.github.io",
@@ -1999,6 +2014,18 @@ orgs.newOrg('eclipse-ee4j') {
           requires_status_checks: false,
           requires_strict_status_checks: true,
         },
+        orgs.newBranchProtectionRule('containers') {
+          required_approving_review_count: null,
+          requires_pull_request: false,
+          requires_status_checks: false,
+          requires_strict_status_checks: true,
+        },
+        orgs.newBranchProtectionRule('gh-pages') {
+          required_approving_review_count: null,
+          requires_pull_request: false,
+          requires_status_checks: false,
+          requires_strict_status_checks: true,
+        },
         orgs.newBranchProtectionRule('6.5.x') {
           required_approving_review_count: null,
           requires_pull_request: false,
@@ -2018,18 +2045,6 @@ orgs.newOrg('eclipse-ee4j') {
           requires_strict_status_checks: true,
         },
         orgs.newBranchProtectionRule('6.2.x') {
-          required_approving_review_count: null,
-          requires_pull_request: false,
-          requires_status_checks: false,
-          requires_strict_status_checks: true,
-        },
-        orgs.newBranchProtectionRule('containers') {
-          required_approving_review_count: null,
-          requires_pull_request: false,
-          requires_status_checks: false,
-          requires_strict_status_checks: true,
-        },
-        orgs.newBranchProtectionRule('gh-pages') {
           required_approving_review_count: null,
           requires_pull_request: false,
           requires_status_checks: false,
@@ -2196,7 +2211,6 @@ orgs.newOrg('eclipse-ee4j') {
     },
     orgs.newRepo('soteria') {
       allow_merge_commit: true,
-      default_branch: "main",
       delete_branch_on_merge: false,
       dependabot_security_updates_enabled: true,
       description: "Soteria, a Jakarta Security implementation",
