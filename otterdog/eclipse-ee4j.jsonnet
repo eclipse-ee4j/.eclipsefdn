@@ -1,6 +1,6 @@
 local orgs = import 'vendor/otterdog-defaults/otterdog-defaults.libsonnet';
 
-orgs.newOrg('eclipse-ee4j') {
+orgs.newOrg('ee4j', 'eclipse-ee4j') {
   settings+: {
     blog: "https://projects.eclipse.org/projects/ee4j",
     description: "The Eclipse EE4J Project",
