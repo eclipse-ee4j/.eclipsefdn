@@ -449,6 +449,11 @@ orgs.newOrg('ee4j', 'eclipse-ee4j') {
       environments: [
         orgs.newEnvironment('github-pages'),
       ],
+      secrets: [
+        orgs.newRepoSecret('DEVELOCITY_API_TOKEN') {
+          value: "pass:bots/ee4j.glassfish/develocity.eclipse.org/api-token",
+        },
+      ],
     },
     orgs.newRepo('glassfish-build-maven-plugin') {
       allow_merge_commit: true,
