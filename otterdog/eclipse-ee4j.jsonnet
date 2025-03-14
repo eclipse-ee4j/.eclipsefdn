@@ -291,7 +291,6 @@ orgs.newOrg('ee4j', 'eclipse-ee4j') {
     orgs.newRepo('ee4j') {
       allow_merge_commit: true,
       allow_update_branch: false,
-      default_branch: "master",
       delete_branch_on_merge: false,
       dependabot_security_updates_enabled: true,
       description: "Eclipse EE4J Top-level Project and community related issues",
@@ -305,7 +304,6 @@ orgs.newOrg('ee4j', 'eclipse-ee4j') {
     orgs.newRepo('ee4j-website') {
       allow_merge_commit: true,
       allow_update_branch: false,
-      default_branch: "master",
       delete_branch_on_merge: false,
       dependabot_security_updates_enabled: true,
       description: "Website for the Eclipse EE4J Top Level Project",
