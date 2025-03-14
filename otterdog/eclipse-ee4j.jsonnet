@@ -2275,9 +2275,7 @@ orgs.newOrg('ee4j', 'eclipse-ee4j') {
       delete_branch_on_merge: false,
       dependabot_security_updates_enabled: true,
       description: "Eclipse Starter for Jakarta EE",
-      gh_pages_build_type: "legacy",
-      gh_pages_source_branch: "gh-pages",
-      gh_pages_source_path: "/",
+      gh_pages_build_type: "disabled",
       homepage: "",
       web_commit_signoff_required: false,
       workflows+: {
