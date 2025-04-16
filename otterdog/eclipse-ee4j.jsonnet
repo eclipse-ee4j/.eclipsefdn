@@ -1656,7 +1656,6 @@ orgs.newOrg('ee4j', 'eclipse-ee4j') {
     orgs.newRepo('krazo') {
       allow_merge_commit: true,
       allow_update_branch: false,
-      default_branch: "master",
       delete_branch_on_merge: false,
       dependabot_security_updates_enabled: true,
       gh_pages_build_type: "legacy",
