@@ -2006,6 +2006,14 @@ orgs.newOrg('ee4j', 'eclipse-ee4j') {
       workflows+: {
         default_workflow_permissions: "write",
       },
+      secrets: [
+        orgs.newRepoSecret('DOCKER_HUB_TOKEN') {
+          value: "pass:bots/ee4j.openmq/docker.com/api-token",
+        },
+        orgs.newRepoSecret('DOCKER_HUB_USER') {
+          value: "pass:bots/ee4j.openmq/docker.com/username",
+        },
+      ],
       webhooks: [
         orgs.newRepoWebhook('https://ci.eclipse.org/openmq/github-webhook/') {
           content_type: "json",
