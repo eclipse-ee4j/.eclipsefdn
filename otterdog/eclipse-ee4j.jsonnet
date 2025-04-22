@@ -1037,7 +1037,8 @@ orgs.newOrg('ee4j', 'eclipse-ee4j') {
         default_workflow_permissions: "write",
       },
     },
-    orgs.newRepo('grizzly') {
+    orgs.newRepo('glassfish-grizzly') {
+      aliases: ['grizzly'],
       allow_merge_commit: true,
       allow_update_branch: false,
       default_branch: "main",
@@ -1098,7 +1099,8 @@ orgs.newOrg('ee4j', 'eclipse-ee4j') {
         orgs.newEnvironment('github-pages'),
       ],
     },
-    orgs.newRepo('grizzly-ahc') {
+    orgs.newRepo('glassfish-grizzly-ahc') {
+      aliases: ['grizzly-ahc'],
       allow_merge_commit: true,
       allow_update_branch: false,
       default_branch: "master",
@@ -1127,7 +1129,8 @@ orgs.newOrg('ee4j', 'eclipse-ee4j') {
         },
       ],
     },
-    orgs.newRepo('grizzly-memcached') {
+    orgs.newRepo('glassfish-grizzly-memcached') {
+      aliases: ['grizzly-memcached'],
       allow_merge_commit: true,
       allow_update_branch: false,
       default_branch: "master",
@@ -1169,7 +1172,8 @@ orgs.newOrg('ee4j', 'eclipse-ee4j') {
         },
       ],
     },
-    orgs.newRepo('grizzly-npn') {
+    orgs.newRepo('glassfish-grizzly-npn') {
+      aliases: ['grizzly-npn'],
       allow_merge_commit: true,
       allow_update_branch: false,
       default_branch: "master",
@@ -1193,7 +1197,8 @@ orgs.newOrg('ee4j', 'eclipse-ee4j') {
         },
       ],
     },
-    orgs.newRepo('grizzly-thrift') {
+    orgs.newRepo('glassfish-grizzly-thrift') {
+      aliases: ['grizzly-thrift'],
       allow_merge_commit: true,
       allow_update_branch: false,
       default_branch: "master",
