@@ -1686,7 +1686,7 @@ orgs.newOrg('ee4j', 'eclipse-ee4j') {
         },
       ],
       branch_protection_rules: [
-        orgs.newBranchProtectionRule('master') {
+        orgs.newBranchProtectionRule('main') {
           required_approving_review_count: null,
           requires_pull_request: false,
         },
