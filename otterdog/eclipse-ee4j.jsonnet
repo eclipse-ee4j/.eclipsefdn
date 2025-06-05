@@ -1690,7 +1690,7 @@ orgs.newOrg('ee4j', 'eclipse-ee4j') {
           required_approving_review_count: null,
           requires_pull_request: false,
           required_status_checks: [
-             "eclipse-eca-validation:eclipsefdn/eca"
+             "any:eclipsefdn/eca"
           ],
         },
         orgs.newBranchProtectionRule('release-1.0') {
