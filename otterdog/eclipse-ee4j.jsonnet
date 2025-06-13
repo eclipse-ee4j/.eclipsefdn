@@ -1347,10 +1347,6 @@ orgs.newOrg('ee4j', 'eclipse-ee4j') {
       delete_branch_on_merge: false,
       dependabot_security_updates_enabled: true,
       description: "Jakarta EE Tutorial",
-      gh_pages_build_type: "legacy",
-      gh_pages_source_branch: "gh-pages",
-      gh_pages_source_path: "/",
-      homepage: "https://eclipse-ee4j.github.io/jakartaee-tutorial",
       secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       workflows+: {
@@ -1369,9 +1365,6 @@ orgs.newOrg('ee4j', 'eclipse-ee4j') {
           requires_status_checks: false,
           requires_strict_status_checks: true,
         },
-      ],
-      environments: [
-        orgs.newEnvironment('github-pages'),
       ],
     },
     orgs.newRepo('jax-rpc-api') {
