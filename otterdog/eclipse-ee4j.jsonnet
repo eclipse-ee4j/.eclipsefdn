@@ -1348,6 +1348,9 @@ orgs.newOrg('ee4j', 'eclipse-ee4j') {
       dependabot_security_updates_enabled: true,
       description: "Jakarta EE Tutorial",
       secret_scanning_push_protection: "disabled",
+      gh_pages_build_type: "legacy",
+      gh_pages_source_branch: "gh-pages",
+      gh_pages_source_path: "/",
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
