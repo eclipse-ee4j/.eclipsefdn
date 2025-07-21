@@ -2226,6 +2226,30 @@ orgs.newOrg('ee4j', 'eclipse-ee4j') {
         orgs.newEnvironment('github-pages'),
       ],
     },
+    orgs.newRepo('piranha') {
+      allow_merge_commit: true,
+      allow_update_branch: false,
+      delete_branch_on_merge: false,
+      description: "Piranha Project",
+      secret_scanning: "disabled",
+      secret_scanning_push_protection: "disabled",
+      web_commit_signoff_required: false,
+      workflows+: {
+        default_workflow_permissions: "write",
+      },
+    },
+    orgs.newRepo('piranha-website') {
+      allow_merge_commit: true,
+      allow_update_branch: false,
+      delete_branch_on_merge: false,
+      description: "Piranha project website",
+      secret_scanning: "disabled",
+      secret_scanning_push_protection: "disabled",
+      web_commit_signoff_required: false,
+      workflows+: {
+        default_workflow_permissions: "write",
+      },
+    },
     orgs.newRepo('soteria') {
       allow_merge_commit: true,
       delete_branch_on_merge: false,
