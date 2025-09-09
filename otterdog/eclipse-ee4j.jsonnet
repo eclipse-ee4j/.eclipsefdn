@@ -1348,9 +1348,8 @@ orgs.newOrg('ee4j', 'eclipse-ee4j') {
       dependabot_security_updates_enabled: true,
       description: "Jakarta EE Tutorial",
       secret_scanning_push_protection: "disabled",
-      gh_pages_build_type: "legacy",
-      gh_pages_source_branch: "gh-pages",
-      gh_pages_source_path: "/",
+      gh_pages_build_type: "disabled",
+      // gh_pages_source_path: "/",
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -2241,6 +2240,7 @@ orgs.newOrg('ee4j', 'eclipse-ee4j') {
     orgs.newRepo('piranha') {
       allow_merge_commit: true,
       allow_update_branch: false,
+      default_branch: "current",
       delete_branch_on_merge: false,
       description: "Piranha Project",
       secret_scanning: "disabled",
