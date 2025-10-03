@@ -1988,7 +1988,7 @@ orgs.newOrg('ee4j', 'eclipse-ee4j') {
       allow_squash_merge: false,
       allow_update_branch: false,
       default_branch: "master",
-      delete_branch_on_merge: false,
+      delete_branch_on_merge: true,
       dependabot_security_updates_enabled: true,
       description: "OpenMQ",
       gh_pages_build_type: "legacy",
