@@ -1048,7 +1048,7 @@ orgs.newOrg('ee4j', 'eclipse-ee4j') {
       gh_pages_build_type: "legacy",
       gh_pages_source_branch: "gh-pages",
       gh_pages_source_path: "/docs",
-      homepage: "https://eclipse-ee4j.github.io/grizzly",
+      homepage: "https://eclipse-ee4j.github.io/glassfish-grizzly",
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
