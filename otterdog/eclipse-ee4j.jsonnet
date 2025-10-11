@@ -417,7 +417,13 @@ orgs.newOrg('ee4j', 'eclipse-ee4j') {
       gh_pages_source_branch: "gh-pages",
       gh_pages_source_path: "/",
       has_discussions: true,
-      homepage: "https://eclipse-ee4j.github.io/glassfish/",
+      homepage: "https://glassfish.org",
+      topics+: [
+          "glassfish", "jakartaee", "jakarta-ee",
+          "application-server", "microprofile", 
+          "cloud-native", "java",
+          "hacktoberfest"
+      ],
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -461,6 +467,9 @@ orgs.newOrg('ee4j', 'eclipse-ee4j') {
       dependabot_security_updates_enabled: true,
       description: "GlassFish Build Maven Plugin",
       homepage: "",
+      topics+: [
+          "glassfish", "maven-plugin", "java"
+      ],
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -518,6 +527,10 @@ orgs.newOrg('ee4j', 'eclipse-ee4j') {
       gh_pages_source_branch: "gh-pages",
       gh_pages_source_path: "/",
       homepage: "https://projects.eclipse.org/projects/ee4j.glassfish",
+      topics+: [
+          "glassfish", "jakartaee", "jakarta-ee", "java",
+          "hacktoberfest"
+      ],
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -594,6 +607,9 @@ orgs.newOrg('ee4j', 'eclipse-ee4j') {
       dependabot_security_updates_enabled: true,
       description: "FighterFish project",
       homepage: "",
+      topics+: [
+          "glassfish"
+      ],
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -668,6 +684,11 @@ orgs.newOrg('ee4j', 'eclipse-ee4j') {
       gh_pages_source_branch: "gh-pages",
       gh_pages_source_path: "/docs",
       homepage: "https://eclipse-ee4j.github.io/glassfish-hk2",
+      topics+: [
+          "glassfish", "hk2", "dependency-injection",
+          "java",
+          "hacktoberfest"
+      ],
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -716,6 +737,12 @@ orgs.newOrg('ee4j', 'eclipse-ee4j') {
       dependabot_security_updates_enabled: true,
       description: "HK2 extra",
       homepage: "",
+      topics+: [
+          "glassfish", "hk2", "dependency-injection",
+          "java",
+          "hacktoberfest"
+      ],
+
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -808,6 +835,9 @@ orgs.newOrg('ee4j', 'eclipse-ee4j') {
       default_branch: "master",
       delete_branch_on_merge: false,
       homepage: "",
+      topics+: [
+          "glassfish",
+      ],
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -835,6 +865,12 @@ orgs.newOrg('ee4j', 'eclipse-ee4j') {
       delete_branch_on_merge: false,
       dependabot_security_updates_enabled: true,
       description: "Glassfish maven embedded plugin",
+      topics+: [
+          "glassfish", "jakartaee", "jakarta-ee",
+          "maven-plugin", "embedded-glassfish", 
+          "cloud-native", "java",
+          "hacktoberfest"
+      ],
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -860,6 +896,9 @@ orgs.newOrg('ee4j', 'eclipse-ee4j') {
       dependabot_security_updates_enabled: true,
       description: "GlassFish repackaged 3rd party",
       homepage: "",
+      topics+: [
+          "glassfish"
+      ],
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -882,6 +921,11 @@ orgs.newOrg('ee4j', 'eclipse-ee4j') {
       ],
     },
     orgs.newRepo('glassfish-samples') {
+      topics+: [
+          "glassfish", "jakartaee", "jakarta-ee",
+          "examples", "java",
+          "hacktoberfest"
+      ],
       allow_merge_commit: true,
       allow_update_branch: false,
       default_branch: "master",
@@ -893,6 +937,9 @@ orgs.newOrg('ee4j', 'eclipse-ee4j') {
       },
     },
     orgs.newRepo('glassfish-security-plugin') {
+      topics+: [
+          "glassfish", "maven-plugin"
+      ],
       allow_merge_commit: true,
       allow_update_branch: false,
       default_branch: "master",
@@ -923,6 +970,11 @@ orgs.newOrg('ee4j', 'eclipse-ee4j') {
       dependabot_security_updates_enabled: true,
       description: "Shoal",
       homepage: "",
+      topics+: [
+          "glassfish", "clustering",
+          "java",
+          "hacktoberfest"
+      ],
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -967,6 +1019,9 @@ orgs.newOrg('ee4j', 'eclipse-ee4j') {
       dependabot_security_updates_enabled: true,
       description: "API Specification Version Maven Plugin",
       homepage: "",
+      topics+: [
+          "glassfish", "maven-plugin"
+      ],
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -995,6 +1050,10 @@ orgs.newOrg('ee4j', 'eclipse-ee4j') {
       dependabot_security_updates_enabled: true,
       description: "GlassFish Woodstock UI components",
       homepage: "",
+      topics+: [
+          "glassfish", "jsf", "ui-components",
+          "hacktoberfest"
+      ],
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -1021,6 +1080,11 @@ orgs.newOrg('ee4j', 'eclipse-ee4j') {
       delete_branch_on_merge: false,
       dependabot_alerts_enabled: false,
       description: "Official supported GlassFish docker",
+      topics+: [
+          "glassfish", "docker",
+          "cloud-native", "java",
+          "hacktoberfest"
+      ],
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -1049,6 +1113,11 @@ orgs.newOrg('ee4j', 'eclipse-ee4j') {
       gh_pages_source_branch: "gh-pages",
       gh_pages_source_path: "/docs",
       homepage: "https://eclipse-ee4j.github.io/grizzly",
+      topics+: [
+          "glassfish", "grizzly", "http", "http-server", "networking",
+          "asynchronous", "framework", "java",
+          "hacktoberfest"
+      ],
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -1100,6 +1169,10 @@ orgs.newOrg('ee4j', 'eclipse-ee4j') {
       ],
     },
     orgs.newRepo('glassfish-grizzly-ahc') {
+      topics+: [
+          "glassfish", "grizzly",
+          "java"
+      ],
       aliases: ['grizzly-ahc'],
       allow_merge_commit: true,
       allow_update_branch: false,
@@ -1137,6 +1210,10 @@ orgs.newOrg('ee4j', 'eclipse-ee4j') {
       delete_branch_on_merge: false,
       dependabot_security_updates_enabled: true,
       description: "Grizzly-memcached",
+      topics+: [
+          "glassfish", "grizzly",
+          "java"
+      ],
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -1180,6 +1257,10 @@ orgs.newOrg('ee4j', 'eclipse-ee4j') {
       delete_branch_on_merge: false,
       dependabot_security_updates_enabled: true,
       description: "Grizzly-npn",
+      topics+: [
+          "glassfish", "grizzly",
+          "java"
+      ],
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -1205,6 +1286,10 @@ orgs.newOrg('ee4j', 'eclipse-ee4j') {
       delete_branch_on_merge: false,
       dependabot_security_updates_enabled: true,
       description: "Grizzly-thrift",
+      topics+: [
+          "glassfish", "grizzly",
+          "java"
+      ],
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
