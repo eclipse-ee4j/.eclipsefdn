@@ -1371,7 +1371,12 @@ orgs.newOrg('ee4j', 'eclipse-ee4j') {
         },
       ],
       environments: [
-        orgs.newEnvironment('github-pages'),
+        orgs.newEnvironment('github-pages') {
+          branch_policies+: [
+            "gh-pages"
+          ],
+          deployment_branch_policy: "selected",
+        },
       ],
     },
     orgs.newRepo('jakartaee-firstcup-examples') {
