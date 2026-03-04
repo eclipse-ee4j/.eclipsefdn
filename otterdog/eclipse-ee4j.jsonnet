@@ -1108,7 +1108,7 @@ orgs.newOrg('ee4j', 'eclipse-ee4j') {
       default_branch: "main",
       delete_branch_on_merge: false,
       dependabot_security_updates_enabled: true,
-      description: "Grizzly",
+      description: "Eclipse Grizzly",
       gh_pages_build_type: "legacy",
       gh_pages_source_branch: "gh-pages",
       gh_pages_source_path: "/docs",
