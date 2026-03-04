@@ -2137,6 +2137,12 @@ orgs.newOrg('ee4j', 'eclipse-ee4j') {
           requires_status_checks: false,
           requires_strict_status_checks: true,
         },
+        orgs.newBranchProtectionRule('6.8.x') {
+          required_approving_review_count: null,
+          requires_pull_request: false,
+          requires_status_checks: false,
+          requires_strict_status_checks: true,
+        },
         orgs.newBranchProtectionRule('6.7.x') {
           required_approving_review_count: null,
           requires_pull_request: false,
