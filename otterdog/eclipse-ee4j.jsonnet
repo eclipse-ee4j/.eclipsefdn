@@ -453,11 +453,6 @@ orgs.newOrg('ee4j', 'eclipse-ee4j') {
       environments: [
         orgs.newEnvironment('github-pages'),
       ],
-      secrets: [
-        orgs.newRepoSecret('DEVELOCITY_API_TOKEN') {
-          value: "pass:bots/ee4j.glassfish/develocity.eclipse.org/api-token",
-        },
-      ],
     },
     orgs.newRepo('glassfish-build-maven-plugin') {
       allow_merge_commit: true,
@@ -2076,6 +2071,23 @@ orgs.newOrg('ee4j', 'eclipse-ee4j') {
       workflows+: {
         default_workflow_permissions: "write",
       },
+      secrets+: [
+        orgs.newRepoSecret('GPG_KEY_ID') {
+          value: "pass:bots/ee4j.odi/gpg/key_id",
+        },
+        orgs.newRepoSecret('GPG_PASSPHRASE') {
+          value: "pass:bots/ee4j.odi/gpg/passphrase",
+        },
+        orgs.newRepoSecret('GPG_PRIVATE_KEY') {
+          value: "pass:bots/ee4j.odi/gpg/secret-subkeys.asc",
+        },
+        orgs.newRepoSecret('CENTRAL_SONATYPE_TOKEN_PASSWORD') {
+          value: "pass:bots/ee4j.odi/central.sonatype.org/token-password",
+        },
+        orgs.newRepoSecret('CENTRAL_SONATYPE_TOKEN_USERNAME') {
+          value: "pass:bots/ee4j.odi/central.sonatype.org/token-username",
+        },
+      ],
     },
     orgs.newRepo('openmq') {
       allow_merge_commit: true,
