@@ -1830,6 +1830,11 @@ orgs.newOrg('ee4j', 'eclipse-ee4j') {
       workflows+: {
         default_workflow_permissions: "write",
       },
+      secrets+: [
+        orgs.newRepoSecret('NVD_API_KEY') {
+          value: "pass:bots/ee4j.metro/nvd.nist.gov/api-key",
+        },
+      ],
       environments: [
         orgs.newEnvironment('github-pages'),
       ],
