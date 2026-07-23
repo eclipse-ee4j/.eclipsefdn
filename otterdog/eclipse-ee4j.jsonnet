@@ -2226,7 +2226,7 @@ orgs.newOrg('ee4j', 'eclipse-ee4j') {
         default_workflow_permissions: "write",
       },
       webhooks: [
-        orgs.newRepoWebhook('https://ci.eclipse.org/orb/github-webhook/') {
+        orgs.newRepoWebhook('https://ci.eclipse.org/glassfish/github-webhook/') {
           content_type: "json",
           events+: [
             "pull_request",
@@ -2258,7 +2258,7 @@ orgs.newOrg('ee4j', 'eclipse-ee4j') {
         default_workflow_permissions: "write",
       },
       webhooks: [
-        orgs.newRepoWebhook('https://ci.eclipse.org/orb/github-webhook/') {
+        orgs.newRepoWebhook('https://ci.eclipse.org/glassfish/github-webhook/') {
           content_type: "json",
           events+: [
             "pull_request",
@@ -2290,7 +2290,7 @@ orgs.newOrg('ee4j', 'eclipse-ee4j') {
         default_workflow_permissions: "write",
       },
       webhooks: [
-        orgs.newRepoWebhook('https://ci.eclipse.org/orb/github-webhook/') {
+        orgs.newRepoWebhook('https://ci.eclipse.org/glassfish/github-webhook/') {
           content_type: "json",
           events+: [
             "pull_request",
@@ -2322,7 +2322,7 @@ orgs.newOrg('ee4j', 'eclipse-ee4j') {
         default_workflow_permissions: "write",
       },
       webhooks: [
-        orgs.newRepoWebhook('https://ci.eclipse.org/orb/github-webhook/') {
+        orgs.newRepoWebhook('https://ci.eclipse.org/glassfish/github-webhook/') {
           content_type: "json",
           events+: [
             "pull_request",
