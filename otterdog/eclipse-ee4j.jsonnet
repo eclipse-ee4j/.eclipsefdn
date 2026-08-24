@@ -1965,7 +1965,7 @@ orgs.newOrg('ee4j', 'eclipse-ee4j') {
     },
     orgs.newRepo('mojarra') {
       allow_merge_commit: true,
-      default_branch: "master",
+      default_branch: "main",
       delete_branch_on_merge: false,
       dependabot_security_updates_enabled: true,
       description: "Mojarra, a Jakarta Faces implementation",
@@ -2009,7 +2009,7 @@ orgs.newOrg('ee4j', 'eclipse-ee4j') {
         },
       ],
       branch_protection_rules: [
-        orgs.newBranchProtectionRule('master') {
+        orgs.newBranchProtectionRule('main') {
           required_approving_review_count: null,
           requires_pull_request: false,
           requires_status_checks: false,
@@ -2034,6 +2034,18 @@ orgs.newOrg('ee4j', 'eclipse-ee4j') {
           requires_strict_status_checks: true,
         },
         orgs.newBranchProtectionRule('4.0') {
+          required_approving_review_count: null,
+          requires_pull_request: false,
+          requires_status_checks: false,
+          requires_strict_status_checks: true,
+        },
+        orgs.newBranchProtectionRule('5.0') {
+          required_approving_review_count: null,
+          requires_pull_request: false,
+          requires_status_checks: false,
+          requires_strict_status_checks: true,
+        },
+        orgs.newBranchProtectionRule('tck-status') {
           required_approving_review_count: null,
           requires_pull_request: false,
           requires_status_checks: false,
