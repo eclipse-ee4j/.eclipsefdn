@@ -117,7 +117,10 @@ orgs.newOrg('ee4j', 'eclipse-ee4j') {
         },
       ],
       environments: [
-        orgs.newEnvironment('github-pages'),
+        orgs.newEnvironment('copilot') {
+        },
+        orgs.newEnvironment('github-pages') {
+        },
       ],
     },
     orgs.newRepo('cdi-cpl') {
@@ -153,6 +156,30 @@ orgs.newOrg('ee4j', 'eclipse-ee4j') {
       allow_update_branch: false,
       default_branch: "master",
       delete_branch_on_merge: false,
+      web_commit_signoff_required: false,
+      workflows+: {
+        default_workflow_permissions: "write",
+      },
+    },
+    orgs.newRepo('coffeebuilder') {
+      allow_merge_commit: true,
+      allow_update_branch: false,
+      delete_branch_on_merge: false,
+      description: "Eclipse coffeebuilder project",
+      secret_scanning: "disabled",
+      secret_scanning_push_protection: "disabled",
+      web_commit_signoff_required: false,
+      workflows+: {
+        default_workflow_permissions: "write",
+      },
+    },
+    orgs.newRepo('coffeebuilder-website') {
+      allow_merge_commit: true,
+      allow_update_branch: false,
+      delete_branch_on_merge: false,
+      description: "Eclipse Coffeebuild project website",
+      secret_scanning: "disabled",
+      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -409,7 +436,6 @@ orgs.newOrg('ee4j', 'eclipse-ee4j') {
     orgs.newRepo('glassfish') {
       allow_merge_commit: true,
       allow_update_branch: false,
-      default_branch: "main",
       delete_branch_on_merge: false,
       dependabot_security_updates_enabled: true,
       description: "Eclipse GlassFish",
@@ -419,10 +445,14 @@ orgs.newOrg('ee4j', 'eclipse-ee4j') {
       has_discussions: true,
       homepage: "https://glassfish.org",
       topics+: [
-          "glassfish", "jakartaee", "jakarta-ee",
-          "application-server", "microprofile", 
-          "cloud-native", "java",
-          "hacktoberfest"
+        "application-server",
+        "cloud-native",
+        "glassfish",
+        "hacktoberfest",
+        "jakarta-ee",
+        "jakartaee",
+        "java",
+        "microprofile"
       ],
       web_commit_signoff_required: false,
       workflows+: {
@@ -443,6 +473,11 @@ orgs.newOrg('ee4j', 'eclipse-ee4j') {
           ],
         },
       ],
+      secrets: [
+        orgs.newRepoSecret('DEVELOCITY_API_TOKEN') {
+          value: "********",
+        },
+      ],
       branch_protection_rules: [
         orgs.newBranchProtectionRule('main') {
           required_approving_review_count: 1,
@@ -451,7 +486,10 @@ orgs.newOrg('ee4j', 'eclipse-ee4j') {
         },
       ],
       environments: [
-        orgs.newEnvironment('github-pages'),
+        orgs.newEnvironment('copilot') {
+        },
+        orgs.newEnvironment('github-pages') {
+        },
       ],
     },
     orgs.newRepo('glassfish-build-maven-plugin') {
@@ -463,7 +501,9 @@ orgs.newOrg('ee4j', 'eclipse-ee4j') {
       description: "GlassFish Build Maven Plugin",
       homepage: "",
       topics+: [
-          "glassfish", "maven-plugin", "java"
+        "glassfish",
+        "java",
+        "maven-plugin"
       ],
       web_commit_signoff_required: false,
       workflows+: {
@@ -523,8 +563,11 @@ orgs.newOrg('ee4j', 'eclipse-ee4j') {
       gh_pages_source_path: "/",
       homepage: "https://projects.eclipse.org/projects/ee4j.glassfish",
       topics+: [
-          "glassfish", "jakartaee", "jakarta-ee", "java",
-          "hacktoberfest"
+        "glassfish",
+        "hacktoberfest",
+        "jakarta-ee",
+        "jakartaee",
+        "java"
       ],
       web_commit_signoff_required: false,
       workflows+: {
@@ -543,7 +586,8 @@ orgs.newOrg('ee4j', 'eclipse-ee4j') {
         },
       ],
       environments: [
-        orgs.newEnvironment('github-pages'),
+        orgs.newEnvironment('github-pages') {
+        },
       ],
     },
     orgs.newRepo('glassfish-copyright-plugin') {
@@ -603,7 +647,7 @@ orgs.newOrg('ee4j', 'eclipse-ee4j') {
       description: "FighterFish project",
       homepage: "",
       topics+: [
-          "glassfish"
+        "glassfish"
       ],
       web_commit_signoff_required: false,
       workflows+: {
@@ -635,6 +679,235 @@ orgs.newOrg('ee4j', 'eclipse-ee4j') {
       ],
       branch_protection_rules: [
         orgs.newBranchProtectionRule('master') {
+          required_approving_review_count: 1,
+          requires_status_checks: false,
+          requires_strict_status_checks: true,
+        },
+      ],
+    },
+    orgs.newRepo('glassfish-grizzly') {
+      allow_merge_commit: true,
+      allow_update_branch: false,
+      delete_branch_on_merge: false,
+      dependabot_security_updates_enabled: true,
+      description: "Eclipse Grizzly",
+      gh_pages_build_type: "legacy",
+      gh_pages_source_branch: "gh-pages",
+      gh_pages_source_path: "/docs",
+      homepage: "https://eclipse-ee4j.github.io/glassfish-grizzly",
+      topics+: [
+        "asynchronous",
+        "framework",
+        "glassfish",
+        "grizzly",
+        "hacktoberfest",
+        "http",
+        "http-server",
+        "java",
+        "networking"
+      ],
+      web_commit_signoff_required: false,
+      workflows+: {
+        default_workflow_permissions: "write",
+      },
+      webhooks: [
+        orgs.newRepoWebhook('https://webhook.zenhub.io/webhook/github/v1/55c139a26bd441c50b') {
+          content_type: "json",
+          events+: [
+            "issue_comment",
+            "issues",
+            "label",
+            "member",
+            "milestone",
+            "pull_request",
+            "pull_request_review",
+            "pull_request_review_comment",
+            "repository",
+            "team_add"
+          ],
+          secret: "********",
+        },
+        orgs.newRepoWebhook('https://notify.travis-ci.org') {
+          events+: [
+            "create",
+            "delete",
+            "issue_comment",
+            "member",
+            "public",
+            "pull_request",
+            "push",
+            "repository"
+          ],
+        },
+      ],
+      branch_protection_rules: [
+        orgs.newBranchProtectionRule('EE4J_8') {
+          required_approving_review_count: 1,
+          requires_status_checks: false,
+          requires_strict_status_checks: true,
+        },
+        orgs.newBranchProtectionRule('main') {
+          required_approving_review_count: 1,
+          requires_status_checks: false,
+          requires_strict_status_checks: true,
+        },
+      ],
+      environments: [
+        orgs.newEnvironment('github-pages') {
+        },
+      ],
+    },
+    orgs.newRepo('glassfish-grizzly-ahc') {
+      allow_merge_commit: true,
+      allow_update_branch: false,
+      default_branch: "master",
+      delete_branch_on_merge: false,
+      dependabot_security_updates_enabled: true,
+      topics+: [
+        "glassfish",
+        "grizzly",
+        "java"
+      ],
+      web_commit_signoff_required: false,
+      workflows+: {
+        default_workflow_permissions: "write",
+      },
+      webhooks: [
+        orgs.newRepoWebhook('https://webhook.zenhub.io/webhook/github/v1/55c73da068d045c40e') {
+          content_type: "json",
+          events+: [
+            "issue_comment",
+            "issues",
+            "label",
+            "member",
+            "milestone",
+            "pull_request",
+            "pull_request_review",
+            "pull_request_review_comment",
+            "repository",
+            "team_add"
+          ],
+          secret: "********",
+        },
+      ],
+    },
+    orgs.newRepo('glassfish-grizzly-memcached') {
+      allow_merge_commit: true,
+      allow_update_branch: false,
+      default_branch: "master",
+      delete_branch_on_merge: false,
+      dependabot_security_updates_enabled: true,
+      description: "Grizzly-memcached",
+      topics+: [
+        "glassfish",
+        "grizzly",
+        "java"
+      ],
+      web_commit_signoff_required: false,
+      workflows+: {
+        default_workflow_permissions: "write",
+      },
+      webhooks: [
+        orgs.newRepoWebhook('https://webhook.zenhub.io/webhook/github/v1/55c23ea767d242c60a') {
+          content_type: "json",
+          events+: [
+            "issue_comment",
+            "issues",
+            "label",
+            "member",
+            "milestone",
+            "pull_request",
+            "pull_request_review",
+            "pull_request_review_comment",
+            "repository",
+            "team_add"
+          ],
+          secret: "********",
+        },
+      ],
+      branch_protection_rules: [
+        orgs.newBranchProtectionRule('EE4J_8') {
+          required_approving_review_count: 1,
+          requires_status_checks: false,
+          requires_strict_status_checks: true,
+        },
+        orgs.newBranchProtectionRule('master') {
+          required_approving_review_count: 1,
+          requires_status_checks: false,
+          requires_strict_status_checks: true,
+        },
+      ],
+    },
+    orgs.newRepo('glassfish-grizzly-npn') {
+      allow_merge_commit: true,
+      allow_update_branch: false,
+      default_branch: "master",
+      delete_branch_on_merge: false,
+      dependabot_security_updates_enabled: true,
+      description: "Grizzly-npn",
+      topics+: [
+        "glassfish",
+        "grizzly",
+        "java"
+      ],
+      web_commit_signoff_required: false,
+      workflows+: {
+        default_workflow_permissions: "write",
+      },
+      branch_protection_rules: [
+        orgs.newBranchProtectionRule('EE4J_8') {
+          required_approving_review_count: 1,
+          requires_status_checks: false,
+          requires_strict_status_checks: true,
+        },
+        orgs.newBranchProtectionRule('master') {
+          required_approving_review_count: 1,
+          requires_status_checks: false,
+          requires_strict_status_checks: true,
+        },
+      ],
+    },
+    orgs.newRepo('glassfish-grizzly-thrift') {
+      allow_merge_commit: true,
+      allow_update_branch: false,
+      default_branch: "master",
+      delete_branch_on_merge: false,
+      dependabot_security_updates_enabled: true,
+      description: "Grizzly-thrift",
+      topics+: [
+        "glassfish",
+        "grizzly",
+        "java"
+      ],
+      web_commit_signoff_required: false,
+      workflows+: {
+        default_workflow_permissions: "write",
+      },
+      webhooks: [
+        orgs.newRepoWebhook('https://webhook.zenhub.io/webhook/github/v1/55c23ea766db40c40b') {
+          content_type: "json",
+          events+: [
+            "issue_comment",
+            "issues",
+            "label",
+            "member",
+            "milestone",
+            "pull_request",
+            "pull_request_review",
+            "pull_request_review_comment",
+            "repository",
+            "team_add"
+          ],
+          secret: "********",
+        },
+      ],
+      branch_protection_rules: [
+        orgs.newBranchProtectionRule('master') {
+          required_approving_review_count: 1,
+          requires_status_checks: false,
+          requires_strict_status_checks: true,
+        },
+        orgs.newBranchProtectionRule('EE4J_8') {
           required_approving_review_count: 1,
           requires_status_checks: false,
           requires_strict_status_checks: true,
@@ -680,9 +953,11 @@ orgs.newOrg('ee4j', 'eclipse-ee4j') {
       gh_pages_source_path: "/docs",
       homepage: "https://eclipse-ee4j.github.io/glassfish-hk2",
       topics+: [
-          "glassfish", "hk2", "dependency-injection",
-          "java",
-          "hacktoberfest"
+        "dependency-injection",
+        "glassfish",
+        "hacktoberfest",
+        "hk2",
+        "java"
       ],
       web_commit_signoff_required: false,
       workflows+: {
@@ -721,7 +996,8 @@ orgs.newOrg('ee4j', 'eclipse-ee4j') {
         },
       ],
       environments: [
-        orgs.newEnvironment('github-pages'),
+        orgs.newEnvironment('github-pages') {
+        },
       ],
     },
     orgs.newRepo('glassfish-hk2-extra') {
@@ -733,11 +1009,12 @@ orgs.newOrg('ee4j', 'eclipse-ee4j') {
       description: "HK2 extra",
       homepage: "",
       topics+: [
-          "glassfish", "hk2", "dependency-injection",
-          "java",
-          "hacktoberfest"
+        "dependency-injection",
+        "glassfish",
+        "hacktoberfest",
+        "hk2",
+        "java"
       ],
-
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -831,7 +1108,7 @@ orgs.newOrg('ee4j', 'eclipse-ee4j') {
       delete_branch_on_merge: false,
       homepage: "",
       topics+: [
-          "glassfish",
+        "glassfish"
       ],
       web_commit_signoff_required: false,
       workflows+: {
@@ -861,10 +1138,14 @@ orgs.newOrg('ee4j', 'eclipse-ee4j') {
       dependabot_security_updates_enabled: true,
       description: "Glassfish maven embedded plugin",
       topics+: [
-          "glassfish", "jakartaee", "jakarta-ee",
-          "maven-plugin", "embedded-glassfish", 
-          "cloud-native", "java",
-          "hacktoberfest"
+        "cloud-native",
+        "embedded-glassfish",
+        "glassfish",
+        "hacktoberfest",
+        "jakarta-ee",
+        "jakartaee",
+        "java",
+        "maven-plugin"
       ],
       web_commit_signoff_required: false,
       workflows+: {
@@ -892,7 +1173,7 @@ orgs.newOrg('ee4j', 'eclipse-ee4j') {
       description: "GlassFish repackaged 3rd party",
       homepage: "",
       topics+: [
-          "glassfish"
+        "glassfish"
       ],
       web_commit_signoff_required: false,
       workflows+: {
@@ -916,30 +1197,34 @@ orgs.newOrg('ee4j', 'eclipse-ee4j') {
       ],
     },
     orgs.newRepo('glassfish-samples') {
-      topics+: [
-          "glassfish", "jakartaee", "jakarta-ee",
-          "examples", "java",
-          "hacktoberfest"
-      ],
       allow_merge_commit: true,
       allow_update_branch: false,
       default_branch: "master",
       delete_branch_on_merge: false,
       dependabot_security_updates_enabled: true,
+      topics+: [
+        "examples",
+        "glassfish",
+        "hacktoberfest",
+        "jakarta-ee",
+        "jakartaee",
+        "java"
+      ],
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
       },
     },
     orgs.newRepo('glassfish-security-plugin') {
-      topics+: [
-          "glassfish", "maven-plugin"
-      ],
       allow_merge_commit: true,
       allow_update_branch: false,
       default_branch: "master",
       delete_branch_on_merge: false,
       dependabot_security_updates_enabled: true,
+      topics+: [
+        "glassfish",
+        "maven-plugin"
+      ],
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -966,9 +1251,10 @@ orgs.newOrg('ee4j', 'eclipse-ee4j') {
       description: "Shoal",
       homepage: "",
       topics+: [
-          "glassfish", "clustering",
-          "java",
-          "hacktoberfest"
+        "clustering",
+        "glassfish",
+        "hacktoberfest",
+        "java"
       ],
       web_commit_signoff_required: false,
       workflows+: {
@@ -1015,7 +1301,8 @@ orgs.newOrg('ee4j', 'eclipse-ee4j') {
       description: "API Specification Version Maven Plugin",
       homepage: "",
       topics+: [
-          "glassfish", "maven-plugin"
+        "glassfish",
+        "maven-plugin"
       ],
       web_commit_signoff_required: false,
       workflows+: {
@@ -1046,8 +1333,10 @@ orgs.newOrg('ee4j', 'eclipse-ee4j') {
       description: "GlassFish Woodstock UI components",
       homepage: "",
       topics+: [
-          "glassfish", "jsf", "ui-components",
-          "hacktoberfest"
+        "glassfish",
+        "hacktoberfest",
+        "jsf",
+        "ui-components"
       ],
       web_commit_signoff_required: false,
       workflows+: {
@@ -1076,9 +1365,11 @@ orgs.newOrg('ee4j', 'eclipse-ee4j') {
       dependabot_alerts_enabled: false,
       description: "Official supported GlassFish docker",
       topics+: [
-          "glassfish", "docker",
-          "cloud-native", "java",
-          "hacktoberfest"
+        "cloud-native",
+        "docker",
+        "glassfish",
+        "hacktoberfest",
+        "java"
       ],
       web_commit_signoff_required: false,
       workflows+: {
@@ -1095,230 +1386,6 @@ orgs.newOrg('ee4j', 'eclipse-ee4j') {
       workflows+: {
         default_workflow_permissions: "write",
       },
-    },
-    orgs.newRepo('glassfish-grizzly') {
-      aliases: ['grizzly'],
-      allow_merge_commit: true,
-      allow_update_branch: false,
-      default_branch: "main",
-      delete_branch_on_merge: false,
-      dependabot_security_updates_enabled: true,
-      description: "Eclipse Grizzly",
-      gh_pages_build_type: "legacy",
-      gh_pages_source_branch: "gh-pages",
-      gh_pages_source_path: "/docs",
-      homepage: "https://eclipse-ee4j.github.io/glassfish-grizzly",
-      topics+: [
-          "glassfish", "grizzly", "http", "http-server", "networking",
-          "asynchronous", "framework", "java",
-          "hacktoberfest"
-      ],
-      web_commit_signoff_required: false,
-      workflows+: {
-        default_workflow_permissions: "write",
-      },
-      webhooks: [
-        orgs.newRepoWebhook('https://webhook.zenhub.io/webhook/github/v1/55c139a26bd441c50b') {
-          content_type: "json",
-          events+: [
-            "issue_comment",
-            "issues",
-            "label",
-            "member",
-            "milestone",
-            "pull_request",
-            "pull_request_review",
-            "pull_request_review_comment",
-            "repository",
-            "team_add"
-          ],
-          secret: "********",
-        },
-        orgs.newRepoWebhook('https://notify.travis-ci.org') {
-          events+: [
-            "create",
-            "delete",
-            "issue_comment",
-            "member",
-            "public",
-            "pull_request",
-            "push",
-            "repository"
-          ],
-        },
-      ],
-      branch_protection_rules: [
-        orgs.newBranchProtectionRule('EE4J_8') {
-          required_approving_review_count: 1,
-          requires_status_checks: false,
-          requires_strict_status_checks: true,
-        },
-        orgs.newBranchProtectionRule('main') {
-          required_approving_review_count: 1,
-          requires_status_checks: false,
-          requires_strict_status_checks: true,
-        },
-      ],
-      environments: [
-        orgs.newEnvironment('github-pages'),
-      ],
-    },
-    orgs.newRepo('glassfish-grizzly-ahc') {
-      topics+: [
-          "glassfish", "grizzly",
-          "java"
-      ],
-      aliases: ['grizzly-ahc'],
-      allow_merge_commit: true,
-      allow_update_branch: false,
-      default_branch: "master",
-      delete_branch_on_merge: false,
-      dependabot_security_updates_enabled: true,
-      web_commit_signoff_required: false,
-      workflows+: {
-        default_workflow_permissions: "write",
-      },
-      webhooks: [
-        orgs.newRepoWebhook('https://webhook.zenhub.io/webhook/github/v1/55c73da068d045c40e') {
-          content_type: "json",
-          events+: [
-            "issue_comment",
-            "issues",
-            "label",
-            "member",
-            "milestone",
-            "pull_request",
-            "pull_request_review",
-            "pull_request_review_comment",
-            "repository",
-            "team_add"
-          ],
-          secret: "********",
-        },
-      ],
-    },
-    orgs.newRepo('glassfish-grizzly-memcached') {
-      aliases: ['grizzly-memcached'],
-      allow_merge_commit: true,
-      allow_update_branch: false,
-      default_branch: "master",
-      delete_branch_on_merge: false,
-      dependabot_security_updates_enabled: true,
-      description: "Grizzly-memcached",
-      topics+: [
-          "glassfish", "grizzly",
-          "java"
-      ],
-      web_commit_signoff_required: false,
-      workflows+: {
-        default_workflow_permissions: "write",
-      },
-      webhooks: [
-        orgs.newRepoWebhook('https://webhook.zenhub.io/webhook/github/v1/55c23ea767d242c60a') {
-          content_type: "json",
-          events+: [
-            "issue_comment",
-            "issues",
-            "label",
-            "member",
-            "milestone",
-            "pull_request",
-            "pull_request_review",
-            "pull_request_review_comment",
-            "repository",
-            "team_add"
-          ],
-          secret: "********",
-        },
-      ],
-      branch_protection_rules: [
-        orgs.newBranchProtectionRule('EE4J_8') {
-          required_approving_review_count: 1,
-          requires_status_checks: false,
-          requires_strict_status_checks: true,
-        },
-        orgs.newBranchProtectionRule('master') {
-          required_approving_review_count: 1,
-          requires_status_checks: false,
-          requires_strict_status_checks: true,
-        },
-      ],
-    },
-    orgs.newRepo('glassfish-grizzly-npn') {
-      aliases: ['grizzly-npn'],
-      allow_merge_commit: true,
-      allow_update_branch: false,
-      default_branch: "master",
-      delete_branch_on_merge: false,
-      dependabot_security_updates_enabled: true,
-      description: "Grizzly-npn",
-      topics+: [
-          "glassfish", "grizzly",
-          "java"
-      ],
-      web_commit_signoff_required: false,
-      workflows+: {
-        default_workflow_permissions: "write",
-      },
-      branch_protection_rules: [
-        orgs.newBranchProtectionRule('EE4J_8') {
-          required_approving_review_count: 1,
-          requires_status_checks: false,
-          requires_strict_status_checks: true,
-        },
-        orgs.newBranchProtectionRule('master') {
-          required_approving_review_count: 1,
-          requires_status_checks: false,
-          requires_strict_status_checks: true,
-        },
-      ],
-    },
-    orgs.newRepo('glassfish-grizzly-thrift') {
-      aliases: ['grizzly-thrift'],
-      allow_merge_commit: true,
-      allow_update_branch: false,
-      default_branch: "master",
-      delete_branch_on_merge: false,
-      dependabot_security_updates_enabled: true,
-      description: "Grizzly-thrift",
-      topics+: [
-          "glassfish", "grizzly",
-          "java"
-      ],
-      web_commit_signoff_required: false,
-      workflows+: {
-        default_workflow_permissions: "write",
-      },
-      webhooks: [
-        orgs.newRepoWebhook('https://webhook.zenhub.io/webhook/github/v1/55c23ea766db40c40b') {
-          content_type: "json",
-          events+: [
-            "issue_comment",
-            "issues",
-            "label",
-            "member",
-            "milestone",
-            "pull_request",
-            "pull_request_review",
-            "pull_request_review_comment",
-            "repository",
-            "team_add"
-          ],
-          secret: "********",
-        },
-      ],
-      branch_protection_rules: [
-        orgs.newBranchProtectionRule('master') {
-          required_approving_review_count: 1,
-          requires_status_checks: false,
-          requires_strict_status_checks: true,
-        },
-        orgs.newBranchProtectionRule('EE4J_8') {
-          required_approving_review_count: 1,
-          requires_status_checks: false,
-          requires_strict_status_checks: true,
-        },
-      ],
     },
     orgs.newRepo('jakartaee-examples') {
       allow_merge_commit: true,
@@ -1430,11 +1497,9 @@ orgs.newOrg('ee4j', 'eclipse-ee4j') {
       archived: true,
       default_branch: "master",
       delete_branch_on_merge: false,
-      dependabot_security_updates_enabled: true,
       description: "Jakarta EE Tutorial",
+      homepage: "https://eclipse-ee4j.github.io/jakartaee-tutorial",
       secret_scanning_push_protection: "disabled",
-      gh_pages_build_type: "disabled",
-      // gh_pages_source_path: "/",
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -1494,7 +1559,8 @@ orgs.newOrg('ee4j', 'eclipse-ee4j') {
         default_workflow_permissions: "write",
       },
       environments: [
-        orgs.newEnvironment('github-pages'),
+        orgs.newEnvironment('github-pages') {
+        },
       ],
     },
     orgs.newRepo('jaxb-dtd-parser') {
@@ -1573,7 +1639,8 @@ orgs.newOrg('ee4j', 'eclipse-ee4j') {
         default_workflow_permissions: "write",
       },
       environments: [
-        orgs.newEnvironment('github-pages'),
+        orgs.newEnvironment('github-pages') {
+        },
       ],
     },
     orgs.newRepo('jaxb-stax-ex') {
@@ -1688,11 +1755,6 @@ orgs.newOrg('ee4j', 'eclipse-ee4j') {
         },
       ],
       branch_protection_rules: [
-        orgs.newBranchProtectionRule('4.x') {
-          required_approving_review_count: 1,
-          requires_status_checks: false,
-          requires_strict_status_checks: true,
-        },
         orgs.newBranchProtectionRule('2.x') {
           requires_status_checks: false,
           requires_strict_status_checks: true,
@@ -1706,9 +1768,15 @@ orgs.newOrg('ee4j', 'eclipse-ee4j') {
           requires_status_checks: false,
           requires_strict_status_checks: true,
         },
+        orgs.newBranchProtectionRule('4.x') {
+          required_approving_review_count: 1,
+          requires_status_checks: false,
+          requires_strict_status_checks: true,
+        },
       ],
       environments: [
-        orgs.newEnvironment('github-pages'),
+        orgs.newEnvironment('github-pages') {
+        },
       ],
     },
     orgs.newRepo('jersey-web') {
@@ -1717,7 +1785,6 @@ orgs.newOrg('ee4j', 'eclipse-ee4j') {
       archived: true,
       default_branch: "master",
       delete_branch_on_merge: false,
-      dependabot_security_updates_enabled: true,
       description: "The source repository for",
       homepage: "https://jersey.github.io",
       secret_scanning: "disabled",
@@ -1740,7 +1807,8 @@ orgs.newOrg('ee4j', 'eclipse-ee4j') {
         default_workflow_permissions: "write",
       },
       environments: [
-        orgs.newEnvironment('master'),
+        orgs.newEnvironment('master') {
+        },
       ],
     },
     orgs.newRepo('krazo') {
@@ -1771,17 +1839,18 @@ orgs.newOrg('ee4j', 'eclipse-ee4j') {
         },
       ],
       branch_protection_rules: [
-        orgs.newBranchProtectionRule('main') {
+        orgs.newBranchProtectionRule('release-1.0') {
           required_approving_review_count: null,
           requires_pull_request: false,
         },
-        orgs.newBranchProtectionRule('release-1.0') {
+        orgs.newBranchProtectionRule('main') {
           required_approving_review_count: null,
           requires_pull_request: false,
         },
       ],
       environments: [
-        orgs.newEnvironment('github-pages'),
+        orgs.newEnvironment('github-pages') {
+        },
       ],
     },
     orgs.newRepo('krazo-extensions') {
@@ -1793,6 +1862,10 @@ orgs.newOrg('ee4j', 'eclipse-ee4j') {
       workflows+: {
         default_workflow_permissions: "write",
       },
+      environments: [
+        orgs.newEnvironment('copilot') {
+        },
+      ],
     },
     orgs.newRepo('management-api') {
       allow_merge_commit: true,
@@ -1830,13 +1903,14 @@ orgs.newOrg('ee4j', 'eclipse-ee4j') {
       workflows+: {
         default_workflow_permissions: "write",
       },
-      secrets+: [
+      secrets: [
         orgs.newRepoSecret('NVD_API_KEY') {
           value: "pass:bots/ee4j.metro/nvd.nist.gov/api-key",
         },
       ],
       environments: [
-        orgs.newEnvironment('github-pages'),
+        orgs.newEnvironment('github-pages') {
+        },
       ],
     },
     orgs.newRepo('metro-jwsdp-samples') {
@@ -1948,7 +2022,8 @@ orgs.newOrg('ee4j', 'eclipse-ee4j') {
         default_workflow_permissions: "write",
       },
       environments: [
-        orgs.newEnvironment('github-pages'),
+        orgs.newEnvironment('github-pages') {
+        },
       ],
     },
     orgs.newRepo('metro-xmlstreambuffer') {
@@ -1965,7 +2040,6 @@ orgs.newOrg('ee4j', 'eclipse-ee4j') {
     },
     orgs.newRepo('mojarra') {
       allow_merge_commit: true,
-      default_branch: "main",
       delete_branch_on_merge: false,
       dependabot_security_updates_enabled: true,
       description: "Mojarra, a Jakarta Faces implementation",
@@ -2009,12 +2083,6 @@ orgs.newOrg('ee4j', 'eclipse-ee4j') {
         },
       ],
       branch_protection_rules: [
-        orgs.newBranchProtectionRule('main') {
-          required_approving_review_count: null,
-          requires_pull_request: false,
-          requires_status_checks: false,
-          requires_strict_status_checks: true,
-        },
         orgs.newBranchProtectionRule('EE4J_8') {
           required_approving_review_count: null,
           requires_pull_request: false,
@@ -2039,13 +2107,19 @@ orgs.newOrg('ee4j', 'eclipse-ee4j') {
           requires_status_checks: false,
           requires_strict_status_checks: true,
         },
-        orgs.newBranchProtectionRule('5.0') {
+        orgs.newBranchProtectionRule('main') {
           required_approving_review_count: null,
           requires_pull_request: false,
           requires_status_checks: false,
           requires_strict_status_checks: true,
         },
         orgs.newBranchProtectionRule('tck-status') {
+          required_approving_review_count: null,
+          requires_pull_request: false,
+          requires_status_checks: false,
+          requires_strict_status_checks: true,
+        },
+        orgs.newBranchProtectionRule('5.0') {
           required_approving_review_count: null,
           requires_pull_request: false,
           requires_status_checks: false,
@@ -2059,7 +2133,8 @@ orgs.newOrg('ee4j', 'eclipse-ee4j') {
         },
       ],
       environments: [
-        orgs.newEnvironment('github-pages'),
+        orgs.newEnvironment('github-pages') {
+        },
       ],
     },
     orgs.newRepo('mojarra-jsf-extensions') {
@@ -2090,11 +2165,20 @@ orgs.newOrg('ee4j', 'eclipse-ee4j') {
       delete_branch_on_merge: false,
       dependabot_alerts_enabled: false,
       description: "Open DI",
+      gh_pages_build_type: "legacy",
+      gh_pages_source_branch: "gh-pages",
+      gh_pages_source_path: "/",
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
       },
-      secrets+: [
+      secrets: [
+        orgs.newRepoSecret('CENTRAL_SONATYPE_TOKEN_PASSWORD') {
+          value: "pass:bots/ee4j.odi/central.sonatype.org/token-password",
+        },
+        orgs.newRepoSecret('CENTRAL_SONATYPE_TOKEN_USERNAME') {
+          value: "pass:bots/ee4j.odi/central.sonatype.org/token-username",
+        },
         orgs.newRepoSecret('GPG_KEY_ID') {
           value: "pass:bots/ee4j.odi/gpg/key_id",
         },
@@ -2104,11 +2188,13 @@ orgs.newOrg('ee4j', 'eclipse-ee4j') {
         orgs.newRepoSecret('GPG_PRIVATE_KEY') {
           value: "pass:bots/ee4j.odi/gpg/secret-subkeys.asc",
         },
-        orgs.newRepoSecret('CENTRAL_SONATYPE_TOKEN_PASSWORD') {
-          value: "pass:bots/ee4j.odi/central.sonatype.org/token-password",
-        },
-        orgs.newRepoSecret('CENTRAL_SONATYPE_TOKEN_USERNAME') {
-          value: "pass:bots/ee4j.odi/central.sonatype.org/token-username",
+      ],
+      environments: [
+        orgs.newEnvironment('github-pages') {
+          branch_policies+: [
+            "gh-pages"
+          ],
+          deployment_branch_policy: "selected",
         },
       ],
     },
@@ -2118,7 +2204,6 @@ orgs.newOrg('ee4j', 'eclipse-ee4j') {
       allow_squash_merge: false,
       allow_update_branch: false,
       default_branch: "master",
-      delete_branch_on_merge: true,
       dependabot_security_updates_enabled: true,
       description: "OpenMQ",
       gh_pages_build_type: "legacy",
@@ -2130,14 +2215,6 @@ orgs.newOrg('ee4j', 'eclipse-ee4j') {
       workflows+: {
         default_workflow_permissions: "write",
       },
-      secrets: [
-        orgs.newRepoSecret('DOCKER_HUB_TOKEN') {
-          value: "pass:bots/ee4j.openmq/docker.com/api-token",
-        },
-        orgs.newRepoSecret('DOCKER_HUB_USER') {
-          value: "pass:bots/ee4j.openmq/docker.com/username",
-        },
-      ],
       webhooks: [
         orgs.newRepoWebhook('https://ci.eclipse.org/openmq/github-webhook/') {
           content_type: "json",
@@ -2145,6 +2222,14 @@ orgs.newOrg('ee4j', 'eclipse-ee4j') {
             "pull_request",
             "push"
           ],
+        },
+      ],
+      secrets: [
+        orgs.newRepoSecret('DOCKER_HUB_TOKEN') {
+          value: "pass:bots/ee4j.openmq/docker.com/api-token",
+        },
+        orgs.newRepoSecret('DOCKER_HUB_USER') {
+          value: "pass:bots/ee4j.openmq/docker.com/username",
         },
       ],
       branch_protection_rules: [
@@ -2161,36 +2246,6 @@ orgs.newOrg('ee4j', 'eclipse-ee4j') {
           requires_strict_status_checks: true,
         },
         orgs.newBranchProtectionRule('gh-pages') {
-          required_approving_review_count: null,
-          requires_pull_request: false,
-          requires_status_checks: false,
-          requires_strict_status_checks: true,
-        },
-        orgs.newBranchProtectionRule('cbi') {
-          required_approving_review_count: null,
-          requires_pull_request: false,
-          requires_status_checks: false,
-          requires_strict_status_checks: true,
-        },
-        orgs.newBranchProtectionRule('6.9.x') {
-          required_approving_review_count: null,
-          requires_pull_request: false,
-          requires_status_checks: false,
-          requires_strict_status_checks: true,
-        },
-        orgs.newBranchProtectionRule('6.8.x') {
-          required_approving_review_count: null,
-          requires_pull_request: false,
-          requires_status_checks: false,
-          requires_strict_status_checks: true,
-        },
-        orgs.newBranchProtectionRule('6.7.x') {
-          required_approving_review_count: null,
-          requires_pull_request: false,
-          requires_status_checks: false,
-          requires_strict_status_checks: true,
-        },
-        orgs.newBranchProtectionRule('6.6.x') {
           required_approving_review_count: null,
           requires_pull_request: false,
           requires_status_checks: false,
@@ -2220,9 +2275,40 @@ orgs.newOrg('ee4j', 'eclipse-ee4j') {
           requires_status_checks: false,
           requires_strict_status_checks: true,
         },
+        orgs.newBranchProtectionRule('6.6.x') {
+          required_approving_review_count: null,
+          requires_pull_request: false,
+          requires_status_checks: false,
+          requires_strict_status_checks: true,
+        },
+        orgs.newBranchProtectionRule('cbi') {
+          required_approving_review_count: null,
+          requires_pull_request: false,
+          requires_status_checks: false,
+          requires_strict_status_checks: true,
+        },
+        orgs.newBranchProtectionRule('6.7.x') {
+          required_approving_review_count: null,
+          requires_pull_request: false,
+          requires_status_checks: false,
+          requires_strict_status_checks: true,
+        },
+        orgs.newBranchProtectionRule('6.8.x') {
+          required_approving_review_count: null,
+          requires_pull_request: false,
+          requires_status_checks: false,
+          requires_strict_status_checks: true,
+        },
+        orgs.newBranchProtectionRule('6.9.x') {
+          required_approving_review_count: null,
+          requires_pull_request: false,
+          requires_status_checks: false,
+          requires_strict_status_checks: true,
+        },
       ],
       environments: [
-        orgs.newEnvironment('github-pages'),
+        orgs.newEnvironment('github-pages') {
+        },
       ],
     },
     orgs.newRepo('orb') {
@@ -2262,6 +2348,10 @@ orgs.newOrg('ee4j', 'eclipse-ee4j') {
           required_approving_review_count: 1,
           requires_status_checks: false,
           requires_strict_status_checks: true,
+        },
+      ],
+      environments: [
+        orgs.newEnvironment('copilot') {
         },
       ],
     },
@@ -2376,7 +2466,8 @@ orgs.newOrg('ee4j', 'eclipse-ee4j') {
         default_workflow_permissions: "write",
       },
       environments: [
-        orgs.newEnvironment('github-pages'),
+        orgs.newEnvironment('github-pages') {
+        },
       ],
     },
     orgs.newRepo('piranha') {
@@ -2391,6 +2482,10 @@ orgs.newOrg('ee4j', 'eclipse-ee4j') {
       workflows+: {
         default_workflow_permissions: "write",
       },
+      environments: [
+        orgs.newEnvironment('copilot') {
+        },
+      ],
     },
     orgs.newRepo('piranha-website') {
       allow_merge_commit: true,
@@ -2457,7 +2552,8 @@ orgs.newOrg('ee4j', 'eclipse-ee4j') {
         },
       ],
       environments: [
-        orgs.newEnvironment('github-pages'),
+        orgs.newEnvironment('github-pages') {
+        },
       ],
     },
     orgs.newRepo('starter') {
@@ -2473,7 +2569,10 @@ orgs.newOrg('ee4j', 'eclipse-ee4j') {
         default_workflow_permissions: "write",
       },
       environments: [
-        orgs.newEnvironment('github-pages'),
+        orgs.newEnvironment('copilot') {
+        },
+        orgs.newEnvironment('github-pages') {
+        },
       ],
     },
     orgs.newRepo('tyrus') {
@@ -2543,7 +2642,8 @@ orgs.newOrg('ee4j', 'eclipse-ee4j') {
         },
       ],
       environments: [
-        orgs.newEnvironment('github-pages'),
+        orgs.newEnvironment('github-pages') {
+        },
       ],
     },
     orgs.newRepo('tyrus-project.github.io') {
@@ -2560,7 +2660,8 @@ orgs.newOrg('ee4j', 'eclipse-ee4j') {
         default_workflow_permissions: "write",
       },
       environments: [
-        orgs.newEnvironment('github-pages'),
+        orgs.newEnvironment('github-pages') {
+        },
       ],
     },
     orgs.newRepo('wasp') {
@@ -2579,7 +2680,6 @@ orgs.newOrg('ee4j', 'eclipse-ee4j') {
     orgs.newRepo('yasson') {
       allow_merge_commit: true,
       allow_update_branch: false,
-      default_branch: "main",
       delete_branch_on_merge: false,
       dependabot_security_updates_enabled: true,
       description: "Eclipse Yasson project",
@@ -2613,7 +2713,8 @@ orgs.newOrg('ee4j', 'eclipse-ee4j') {
         },
       ],
       environments: [
-        orgs.newEnvironment('github-pages'),
+        orgs.newEnvironment('github-pages') {
+        },
       ],
     },
   ],
