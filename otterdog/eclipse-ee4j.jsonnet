@@ -2324,7 +2324,7 @@ orgs.newOrg('ee4j', 'eclipse-ee4j') {
       delete_branch_on_merge: false,
       dependabot_security_updates_enabled: true,
       description: "Eclipse ORB is a CORBA orb for use in Jakarta EE and GlassFish and other projects that still need an ORB.",
-      homepage: "https://projects.eclipse.org/projects/ee4j.orb",
+      homepage: "https://projects.eclipse.org/projects/ee4j.glassfish",
       topics+: [
         "corba",
         "corba-client",
