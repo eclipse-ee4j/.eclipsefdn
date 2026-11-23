@@ -2367,6 +2367,7 @@ orgs.newOrg('ee4j', 'eclipse-ee4j') {
       default_branch: "master",
       delete_branch_on_merge: false,
       dependabot_security_updates_enabled: true,
+      homepage: "https://projects.eclipse.org/projects/ee4j.glassfish",
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -2399,6 +2400,7 @@ orgs.newOrg('ee4j', 'eclipse-ee4j') {
       default_branch: "master",
       delete_branch_on_merge: false,
       dependabot_security_updates_enabled: true,
+      homepage: "https://projects.eclipse.org/projects/ee4j.glassfish",
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -2431,6 +2433,7 @@ orgs.newOrg('ee4j', 'eclipse-ee4j') {
       default_branch: "master",
       delete_branch_on_merge: false,
       dependabot_security_updates_enabled: true,
+      homepage: "https://projects.eclipse.org/projects/ee4j.glassfish",
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
